@@ -1,4 +1,4 @@
-# lunasim_godot 🌙
+# Lunasim 🌙
 
 An elementary Godot engine simulation designed to understand, visualize, and analyze shadow behavior on the lunar surface. 
 
