@@ -1,0 +1,142 @@
+{
+    "pair": "pair_048",
+    "ground_truth": {
+        "experiment": {
+            "camera_offset": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "camera_rotation_offset": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "type": "camera_translation_rotation"
+        },
+        "image_A": {
+            "camera_position": [
+                0.0,
+                35.0,
+                35.0
+            ],
+            "camera_rotation": [
+                -40.7945938110352,
+                -0.343774765729904,
+                0.0
+            ],
+            "crater_count": 35,
+            "sun_rotation": [
+                -49.9999961853027,
+                45.0,
+                0.0
+            ],
+            "terrain_seed": 12345
+        },
+        "image_B": {
+            "camera_position": [
+                0.0,
+                35.0,
+                35.0
+            ],
+            "camera_rotation": [
+                -40.7945938110352,
+                -0.343774765729904,
+                0.0
+            ],
+            "sun_rotation": [
+                -30.0,
+                120.0,
+                0.0
+            ]
+        },
+        "pair_id": "pair_048",
+        "terrain": {
+            "crater_count": 35,
+            "seed": 12345
+        }
+    },
+    "image_size": {
+        "width": 1152,
+        "height": 648
+    },
+    "feature_detection": {
+        "features_image_A": 2000,
+        "features_image_B": 2000
+    },
+    "matching": {
+        "total_matches": 2000,
+        "good_matches": 35,
+        "lowe_ratio": 0.8
+    },
+    "sift": {
+        "nfeatures": 2000,
+        "contrast_threshold": 0.01,
+        "clahe_clip_limit": 2.0,
+        "clahe_tile_grid_size": [
+            8,
+            8
+        ]
+    },
+    "affine": {
+        "inliers": 4,
+        "inlier_ratio": 0.11428571428571428,
+        "spatial_coverage_percent": 18.75,
+        "spatial_coverage_cells": 3,
+        "mean_reprojection_error_px": 0.37484124302864075,
+        "median_reprojection_error_px": 0.3389360308647156,
+        "rmse_px": 0.45021888613700867,
+        "maximum_error_px": 0.7497517466545105,
+        "error_under_1px_percent": 100.0,
+        "error_under_0_5px_percent": 75.0,
+        "error_under_0_25px_percent": 25.0,
+        "matrix": [
+            [
+                -0.5825930434237955,
+                0.3059711527658462,
+                703.9088755184604
+            ],
+            [
+                0.43058718893949716,
+                -1.5575507420469261,
+                744.1223416409864
+            ]
+        ]
+    },
+    "homography": {
+        "inliers": 5,
+        "inlier_ratio": 0.14285714285714285,
+        "spatial_coverage_percent": 18.75,
+        "spatial_coverage_cells": 3,
+        "mean_reprojection_error_px": 1.22415030002594,
+        "median_reprojection_error_px": 1.248426079750061,
+        "rmse_px": 1.4178351163864136,
+        "maximum_error_px": 2.2564194202423096,
+        "error_under_1px_percent": 40.0,
+        "error_under_0_5px_percent": 20.0,
+        "error_under_0_25px_percent": 20.0,
+        "matrix": [
+            [
+                0.16311025667611095,
+                -0.15165844708954368,
+                138.11394557065108
+            ],
+            [
+                0.4058870110634759,
+                -0.9172640896840901,
+                387.6158202921673
+            ],
+            [
+                0.0005905952069279979,
+                -0.0019491427040315547,
+                1.0
+            ]
+        ]
+    },
+    "notes": {
+        "metric_type": "feature_reprojection_error",
+        "ground_truth_camera_geometry_available": true,
+        "ground_truth_pixel_correspondence_available": false,
+        "subpixel_values_are_not_true_ground_truth_accuracy": true
+    }
+}

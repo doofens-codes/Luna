@@ -1,0 +1,155 @@
+[gd_scene format=3 uid="uid://cmynapixl76ed"]
+
+[ext_resource type="Script" uid="uid://c60nt860pfkyi" path="res://scripts/terrain/TerrainGenerator.gd" id="1_elqb8"]
+[ext_resource type="Script" uid="uid://diifsnkakpy5j" path="res://scripts/camera/CameraController.gd" id="2_rvslj"]
+[ext_resource type="Script" uid="uid://b6h8xigxhpd6" path="res://scripts/SunController.gd" id="3_0bbpv"]
+
+[node name="LunaSim" type="Node3D" unique_id=675618947]
+script = ExtResource("1_elqb8")
+macro_strength = 0.8
+meso_strength = 0.2
+micro_strength = 0.04
+crater_count = 35
+crater_min_radius = 2.0
+crater_max_radius = 7.0
+crater_depth = 2.5
+crater_rim_height = 0.8
+crater_irregularity = 0.12
+camera_test_offset = Vector3(4, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=88777352]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 35, 35)
+script = ExtResource("2_rvslj")
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=729165551]
+transform = Transform3D(0.8660254, 0.35355338, -0.35355338, 0, 0.70710677, 0.70710677, 0.5, -0.6123724, 0.6123724, 0, 0, 0)
+shadow_opacity = 0.65
+shadow_blur = 2.0
+script = ExtResource("3_0bbpv")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1983263427]
+
+[node name="ControlPanel" type="Panel" parent="UI" unique_id=742161946]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -812.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleLabel" type="Label" parent="UI/ControlPanel" unique_id=412494659]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 29.0
+offset_right = 187.0
+offset_bottom = 52.0
+text = "LUNA-SIM"
+
+[node name="TerrainSectionLabel" type="Label" parent="UI/ControlPanel" unique_id=930275253]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 80.0
+offset_right = 270.0
+offset_bottom = 110.0
+text = "TERRAIN"
+
+[node name="TerrainInfoLabel" type="Label" parent="UI/ControlPanel" unique_id=1888605128]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 110.0
+offset_right = 270.0
+offset_bottom = 135.0
+text = "Procedural lunar surface"
+
+[node name="RegenerateButton" type="Button" parent="UI/ControlPanel" unique_id=982569735]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 145.0
+offset_right = 270.0
+offset_bottom = 180.0
+text = "REGENERATE TERRAIN"
+
+[node name="CraterCountInput" type="SpinBox" parent="UI/ControlPanel" unique_id=204070196]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 190.0
+offset_right = 270.0
+offset_bottom = 225.0
+value = 35.0
+
+[node name="TerrainSeedInput" type="SpinBox" parent="UI/ControlPanel" unique_id=753156569]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 235.0
+offset_right = 270.0
+offset_bottom = 270.0
+max_value = 999999.0
+value = 12345.0
+
+[node name="CameraInfoLabel" type="Label" parent="UI/ControlPanel" unique_id=1675956560]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 320.0
+offset_right = 300.0
+offset_bottom = 369.0
+text = "Position: —
+Rotation: —"
+
+[node name="CameraSectionLabel" type="Label" parent="UI/ControlPanel" unique_id=1724878037]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 285.0
+offset_right = 270.0
+offset_bottom = 315.0
+text = "CAMERA"
+
+[node name="SunInfoLabel" type="Label" parent="UI/ControlPanel" unique_id=886606839]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 406.0
+offset_right = 302.0
+offset_bottom = 507.0
+text = "Azimuth: 45°
+Elevation: -50°
+J/L: Azimuth
+I/K: Elevation"
+
+[node name="SunSectionLabel" type="Label" parent="UI/ControlPanel" unique_id=696557920]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 378.0
+offset_right = 299.0
+offset_bottom = 408.0
+text = "SUN / ILLUMINATION"
+
+[node name="CaptureSectionLabel" type="Label" parent="UI/ControlPanel" unique_id=984766499]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 524.0
+offset_right = 299.0
+offset_bottom = 554.0
+text = "IMAGE CAPTURE"
+
+[node name="CaptureImageButton" type="Button" parent="UI/ControlPanel" unique_id=2023926911]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 546.0
+offset_right = 267.0
+offset_bottom = 581.0
+text = "CAPTURE IMAGE A"
+
+[node name="CaptureImageBButton" type="Button" parent="UI/ControlPanel" unique_id=423953498]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 581.0
+offset_right = 267.0
+offset_bottom = 616.0
+pivot_offset = Vector2(20, 555)
+text = "CAPTURE IMAGE B"
+
+[connection signal="pressed" from="UI/ControlPanel/RegenerateButton" to="." method="_on_regenerate_button_pressed"]
+[connection signal="pressed" from="UI/ControlPanel/CaptureImageButton" to="." method="_on_capture_image_button_pressed"]
+[connection signal="pressed" from="UI/ControlPanel/CaptureImageBButton" to="." method="_on_capture_image_b_button_pressed"]

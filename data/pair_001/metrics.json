@@ -1,0 +1,85 @@
+{
+    "pair": "pair_001",
+    "image_size": {
+        "width": 1152,
+        "height": 648
+    },
+    "feature_detection": {
+        "features_image_A": 1259,
+        "features_image_B": 1444
+    },
+    "matching": {
+        "total_matches": 1259,
+        "good_matches": 294,
+        "lowe_ratio": 0.8
+    },
+    "sift": {
+        "nfeatures": 2000,
+        "contrast_threshold": 0.01,
+        "clahe_clip_limit": 2.0,
+        "clahe_tile_grid_size": [
+            8,
+            8
+        ]
+    },
+    "affine": {
+        "inliers": 210,
+        "inlier_ratio": 0.7142857142857143,
+        "spatial_coverage_percent": 25.0,
+        "spatial_coverage_cells": 4,
+        "mean_reprojection_error_px": 0.04074530676007271,
+        "median_reprojection_error_px": 0.017670411616563797,
+        "rmse_px": 0.09209778159856796,
+        "maximum_error_px": 0.8453874588012695,
+        "error_under_1px_percent": 100.0,
+        "error_under_0_5px_percent": 99.04761904761905,
+        "error_under_0_25px_percent": 97.14285714285714,
+        "matrix": [
+            [
+                0.99998338017011,
+                -0.00012458866229785842,
+                0.022476693651239228
+            ],
+            [
+                -0.00017923410547489974,
+                0.9996258273958968,
+                0.10635530824698193
+            ]
+        ]
+    },
+    "homography": {
+        "inliers": 210,
+        "inlier_ratio": 0.7142857142857143,
+        "spatial_coverage_percent": 25.0,
+        "spatial_coverage_cells": 4,
+        "mean_reprojection_error_px": 0.03959158807992935,
+        "median_reprojection_error_px": 0.014253787696361542,
+        "rmse_px": 0.09165462851524353,
+        "maximum_error_px": 0.8489555716514587,
+        "error_under_1px_percent": 100.0,
+        "error_under_0_5px_percent": 99.52380952380952,
+        "error_under_0_25px_percent": 97.14285714285714,
+        "matrix": [
+            [
+                1.0016153320137682,
+                5.8812133452655196e-05,
+                -0.2773057585143592
+            ],
+            [
+                0.00018738262548593582,
+                1.0006004024548243,
+                -0.04099322127591979
+            ],
+            [
+                2.1529427943551e-06,
+                5.587838862964158e-07,
+                1.0
+            ]
+        ]
+    },
+    "notes": {
+        "metric_type": "feature_reprojection_error",
+        "ground_truth_pixel_correspondence_available": false,
+        "subpixel_values_are_not_true_ground_truth_accuracy": true
+    }
+}

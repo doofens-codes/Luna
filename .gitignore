@@ -1,0 +1,18 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+cat << EOF > .gitignore
+# Godot-specific ignores
+.godot/
+*.translation
+
+# Mono/C# specific ignores (if applicable)
+.mono/
+data_*/
+mono_crash_*.json
+
+# System overrides
+.DS_Store
+Thumbs.db
+EOF

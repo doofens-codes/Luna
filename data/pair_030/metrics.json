@@ -1,0 +1,142 @@
+{
+    "pair": "pair_030",
+    "ground_truth": {
+        "experiment": {
+            "camera_offset": [
+                8.0,
+                0.0,
+                0.0
+            ],
+            "camera_rotation_offset": [
+                0.0,
+                10.0,
+                0.0
+            ],
+            "type": "camera_translation_rotation"
+        },
+        "image_A": {
+            "camera_position": [
+                0.355222940444946,
+                31.9461994171143,
+                31.4145317077637
+            ],
+            "camera_rotation": [
+                -64.5150527954102,
+                -0.114566467702389,
+                0.0
+            ],
+            "crater_count": 35,
+            "sun_rotation": [
+                -64.4995498657227,
+                -168.994857788086,
+                0.0
+            ],
+            "terrain_seed": 12345
+        },
+        "image_B": {
+            "camera_position": [
+                8.35522270202637,
+                31.9461994171143,
+                31.4145317077637
+            ],
+            "camera_rotation": [
+                -64.5150451660156,
+                9.88543319702148,
+                0.0
+            ],
+            "sun_rotation": [
+                -64.4995498657227,
+                -168.994857788086,
+                0.0
+            ]
+        },
+        "pair_id": "pair_030",
+        "terrain": {
+            "crater_count": 35,
+            "seed": 12345
+        }
+    },
+    "image_size": {
+        "width": 1152,
+        "height": 648
+    },
+    "feature_detection": {
+        "features_image_A": 2000,
+        "features_image_B": 2000
+    },
+    "matching": {
+        "total_matches": 2000,
+        "good_matches": 1101,
+        "lowe_ratio": 0.8
+    },
+    "sift": {
+        "nfeatures": 2000,
+        "contrast_threshold": 0.01,
+        "clahe_clip_limit": 2.0,
+        "clahe_tile_grid_size": [
+            8,
+            8
+        ]
+    },
+    "affine": {
+        "inliers": 402,
+        "inlier_ratio": 0.3651226158038147,
+        "spatial_coverage_percent": 56.25,
+        "spatial_coverage_cells": 9,
+        "mean_reprojection_error_px": 2.719326972961426,
+        "median_reprojection_error_px": 2.8171095848083496,
+        "rmse_px": 2.9907939434051514,
+        "maximum_error_px": 5.496122360229492,
+        "error_under_1px_percent": 10.199004975124378,
+        "error_under_0_5px_percent": 2.4875621890547266,
+        "error_under_0_25px_percent": 0.4975124378109453,
+        "matrix": [
+            [
+                1.0403318023396733,
+                0.30657124771828237,
+                -50.89476127735155
+            ],
+            [
+                -0.13003116547675395,
+                1.0050345049347773,
+                78.08197671521495
+            ]
+        ]
+    },
+    "homography": {
+        "inliers": 700,
+        "inlier_ratio": 0.6357856494096276,
+        "spatial_coverage_percent": 87.5,
+        "spatial_coverage_cells": 14,
+        "mean_reprojection_error_px": 2.3878939151763916,
+        "median_reprojection_error_px": 2.2669243812561035,
+        "rmse_px": 2.7421770095825195,
+        "maximum_error_px": 4.992458820343018,
+        "error_under_1px_percent": 20.142857142857142,
+        "error_under_0_5px_percent": 7.7142857142857135,
+        "error_under_0_25px_percent": 2.2857142857142856,
+        "matrix": [
+            [
+                1.2345213789198677,
+                0.31914759372920926,
+                -87.61621627173189
+            ],
+            [
+                -0.10951991407190285,
+                1.128128136970356,
+                67.07141211171528
+            ],
+            [
+                0.00021398914704686076,
+                2.9002799066672444e-05,
+                1.0
+            ]
+        ]
+    },
+    "notes": {
+        "metric_type": "feature_reprojection_error",
+        "ground_truth_camera_geometry_available": true,
+        "ground_truth_pixel_correspondence_available": false,
+        "subpixel_values_are_not_true_ground_truth_accuracy": true
+    }
+}

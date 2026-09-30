@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://cmynapixl76ed"]
+
+[ext_resource type="Script" uid="uid://c60nt860pfkyi" path="res://scripts/terrain/TerrainGenerator.gd" id="1_elqb8"]
+[ext_resource type="Script" uid="uid://diifsnkakpy5j" path="res://scripts/camera/CameraController.gd" id="2_rvslj"]
+[ext_resource type="Script" uid="uid://b6h8xigxhpd6" path="res://scripts/SunController.gd" id="3_0bbpv"]
+
+[node name="LunaSim" type="Node3D" unique_id=675618947]
+script = ExtResource("1_elqb8")
+terrain_size = null
+resolution = null
+height_scale = null
+macro_strength = 0.8
+macro_frequency = null
+meso_strength = 0.2
+meso_frequency = null
+micro_strength = 0.04
+micro_frequency = null
+crater_count = 35
+crater_min_radius = 2.0
+crater_max_radius = 7.0
+crater_depth = 2.5
+crater_rim_height = 0.8
+crater_irregularity = 0.12
+terrain_seed = null
+camera_test_offset = Vector3(4, 0, 0)
+dataset_offsets = null
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=88777352]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 35, 35)
+script = ExtResource("2_rvslj")
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=729165551]
+transform = Transform3D(0.8660254, 0.35355338, -0.35355338, 0, 0.70710677, 0.70710677, 0.5, -0.6123724, 0.6123724, 0, 0, 0)
+script = ExtResource("3_0bbpv")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1983263427]
+
+[node name="ControlPanel" type="Panel" parent="UI" unique_id=742161946]
+offset_left = 260.0
+offset_top = 100.0
+offset_right = 520.0
+offset_bottom = 120.0
+
+[node name="RegenerateButton" type="Button" parent="UI/ControlPanel" unique_id=982569735]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "REGENERATE TERRAIN"
+
+[node name="CraterCountInput" type="SpinBox" parent="UI/ControlPanel" unique_id=204070196]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 50.0
+offset_right = 106.5
+offset_bottom = 81.0
+value = 35.0
+
+[node name="TerrainSeedInput" type="SpinBox" parent="UI/ControlPanel" unique_id=753156569]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 90.0
+offset_right = 106.5
+offset_bottom = 121.0
+max_value = 999999.0
+value = 12345.0
+
+[node name="CaptureImageButton" type="Button" parent="UI/ControlPanel" unique_id=2023926911]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 130.0
+offset_right = 154.0
+offset_bottom = 161.0
+text = "CAPTURE IMAGE A"
+
+[node name="CaptureImageBButton" type="Button" parent="UI/ControlPanel" unique_id=423953498]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 160.0
+offset_right = 169.0
+offset_bottom = 191.0
+text = "CAPTURE IMAGE B"
+
+[connection signal="pressed" from="UI/ControlPanel/RegenerateButton" to="." method="_on_regenerate_button_pressed"]
+[connection signal="pressed" from="UI/ControlPanel/CaptureImageButton" to="." method="_on_capture_image_button_pressed"]
+[connection signal="pressed" from="UI/ControlPanel/CaptureImageBButton" to="." method="_on_capture_image_b_button_pressed"]

@@ -1,0 +1,81 @@
+{
+    "baseline_name": "LUNA-SIM Classical Registration Baseline",
+    "baseline_version": "1.0",
+    "reference_pair": "pair_004",
+
+    "input": {
+        "image_A": "data/pair_004/image_A.png",
+        "image_B": "data/pair_004/image_B.png"
+    },
+
+    "preprocessing": {
+        "grayscale": true,
+        "clahe": true,
+        "clahe_clip_limit": 2.0,
+        "clahe_tile_grid_size": [8, 8]
+    },
+
+    "feature_detection": {
+        "method": "SIFT",
+        "nfeatures": 2000,
+        "contrast_threshold": 0.01
+    },
+
+    "feature_matching": {
+        "method": "BFMatcher",
+        "knn_k": 2,
+        "lowe_ratio": 0.80
+    },
+
+    "robust_estimation": {
+        "method": "RANSAC",
+        "reprojection_threshold_px": 5.0
+    },
+
+    "transformations": {
+        "affine": true,
+        "homography": true
+    },
+
+    "evaluation_metrics": [
+        "inlier_count",
+        "inlier_ratio",
+        "mean_reprojection_error",
+        "median_reprojection_error",
+        "RMSE",
+        "maximum_error",
+        "spatial_coverage"
+    ],
+
+    "reference_results": {
+        "affine": {
+            "inliers": 70,
+            "inlier_ratio_percent": 47.62,
+            "spatial_coverage_percent": 56.25,
+            "spatial_coverage_cells": "9/16",
+            "mean_reprojection_error_px": 2.128,
+            "median_reprojection_error_px": 1.999,
+            "rmse_px": 2.409,
+            "maximum_error_px": 4.387
+        },
+
+        "homography": {
+            "inliers": 85,
+            "inlier_ratio_percent": 57.82,
+            "spatial_coverage_percent": 62.50,
+            "spatial_coverage_cells": "10/16",
+            "mean_reprojection_error_px": 2.557,
+            "median_reprojection_error_px": 2.625,
+            "rmse_px": 2.801,
+            "maximum_error_px": 4.903
+        }
+    },
+
+    "interpretation": {
+        "affine_lower_reprojection_error": true,
+        "homography_more_inliers": true,
+        "homography_higher_spatial_coverage": true,
+        "universal_best_transformation_established": false,
+        "true_ground_truth_pixel_accuracy_available": false
+    }
+}

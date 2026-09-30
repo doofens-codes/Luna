@@ -1,0 +1,56 @@
+{
+	"experiment": {
+		"camera_offset": [
+			2.0,
+			0.0,
+			0.0
+		],
+		"camera_rotation_offset": [
+			0.0,
+			0.0,
+			0.0
+		],
+		"type": "camera_translation_rotation"
+	},
+	"image_A": {
+		"camera_position": [
+			-2.80454659461975,
+			20.370885848999,
+			22.4584579467773
+		],
+		"camera_rotation": [
+			-55.8417625427246,
+			12.6050891876221,
+			0.0
+		],
+		"crater_count": 35,
+		"sun_rotation": [
+			-49.9999961853027,
+			45.0,
+			0.0
+		],
+		"terrain_seed": 12345
+	},
+	"image_B": {
+		"camera_position": [
+			-0.804546594619751,
+			20.370885848999,
+			22.4584579467773
+		],
+		"camera_rotation": [
+			-55.8417625427246,
+			12.6050891876221,
+			0.0
+		],
+		"sun_rotation": [
+			-49.9999961853027,
+			45.0,
+			0.0
+		]
+	},
+	"pair_id": "pair_011",
+	"terrain": {
+		"crater_count": 35,
+		"seed": 12345
+	}
+}

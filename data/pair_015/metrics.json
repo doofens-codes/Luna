@@ -1,0 +1,142 @@
+{
+    "pair": "pair_015",
+    "ground_truth": {
+        "experiment": {
+            "camera_offset": [
+                10.0,
+                0.0,
+                0.0
+            ],
+            "camera_rotation_offset": [
+                0.0,
+                -10.0,
+                0.0
+            ],
+            "type": "camera_translation_rotation"
+        },
+        "image_A": {
+            "camera_position": [
+                -2.80454659461975,
+                20.370885848999,
+                22.4584579467773
+            ],
+            "camera_rotation": [
+                -55.8417625427246,
+                12.6050891876221,
+                0.0
+            ],
+            "crater_count": 35,
+            "sun_rotation": [
+                -49.9999961853027,
+                45.0,
+                0.0
+            ],
+            "terrain_seed": 12345
+        },
+        "image_B": {
+            "camera_position": [
+                7.19545364379883,
+                20.370885848999,
+                22.4584579467773
+            ],
+            "camera_rotation": [
+                -55.8417549133301,
+                2.60508894920349,
+                0.0
+            ],
+            "sun_rotation": [
+                -49.9999961853027,
+                45.0,
+                0.0
+            ]
+        },
+        "pair_id": "pair_015",
+        "terrain": {
+            "crater_count": 35,
+            "seed": 12345
+        }
+    },
+    "image_size": {
+        "width": 1152,
+        "height": 648
+    },
+    "feature_detection": {
+        "features_image_A": 901,
+        "features_image_B": 878
+    },
+    "matching": {
+        "total_matches": 901,
+        "good_matches": 189,
+        "lowe_ratio": 0.8
+    },
+    "sift": {
+        "nfeatures": 2000,
+        "contrast_threshold": 0.01,
+        "clahe_clip_limit": 2.0,
+        "clahe_tile_grid_size": [
+            8,
+            8
+        ]
+    },
+    "affine": {
+        "inliers": 49,
+        "inlier_ratio": 0.25925925925925924,
+        "spatial_coverage_percent": 37.5,
+        "spatial_coverage_cells": 6,
+        "mean_reprojection_error_px": 3.0084123611450195,
+        "median_reprojection_error_px": 3.076169490814209,
+        "rmse_px": 3.240481376647949,
+        "maximum_error_px": 5.363569259643555,
+        "error_under_1px_percent": 6.122448979591836,
+        "error_under_0_5px_percent": 0.0,
+        "error_under_0_25px_percent": 0.0,
+        "matrix": [
+            [
+                1.08999549430751,
+                0.11456123473690684,
+                122.2499296708979
+            ],
+            [
+                0.101013175593622,
+                1.0395397913315882,
+                -46.25555067972662
+            ]
+        ]
+    },
+    "homography": {
+        "inliers": 66,
+        "inlier_ratio": 0.3492063492063492,
+        "spatial_coverage_percent": 37.5,
+        "spatial_coverage_cells": 6,
+        "mean_reprojection_error_px": 2.731849431991577,
+        "median_reprojection_error_px": 2.791703701019287,
+        "rmse_px": 3.031352996826172,
+        "maximum_error_px": 4.955205917358398,
+        "error_under_1px_percent": 10.606060606060606,
+        "error_under_0_5px_percent": 1.5151515151515151,
+        "error_under_0_25px_percent": 1.5151515151515151,
+        "matrix": [
+            [
+                0.8124257643270835,
+                0.07452632888062943,
+                190.05556945008675
+            ],
+            [
+                0.06667841613447589,
+                0.9291889523655342,
+                -29.546000667641767
+            ],
+            [
+                -0.00020782200779940154,
+                -5.8481705199425064e-05,
+                1.0
+            ]
+        ]
+    },
+    "notes": {
+        "metric_type": "feature_reprojection_error",
+        "ground_truth_camera_geometry_available": true,
+        "ground_truth_pixel_correspondence_available": false,
+        "subpixel_values_are_not_true_ground_truth_accuracy": true
+    }
+}
